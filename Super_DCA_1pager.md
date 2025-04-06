@@ -1,6 +1,6 @@
-## Super DCA: Time-Weighted Average Market Maker with Superchain Interoperability
+# Super DCA: Time-Weighted Average Market Maker with Superchain Interoperability
 
-### Product Description
+## Product Description
 
 Super DCA is an advanced Time-Weighted Average Market Maker (TWAMM) designed to execute large orders efficiently by breaking them into smaller sub-orders over time. Key features include:
 
@@ -8,7 +8,7 @@ Super DCA is an advanced Time-Weighted Average Market Maker (TWAMM) designed to 
 - **Dynamic Fee Structure:** Execution fees adjust based on DCA volume and network conditions, optimizing gas efficiency and incentivizing user participation. 
 - **Simplified Execution:** The protocol ensures that gas costs are less than or equal to execution rewards, allowing staked users to execute DCA trades and minimizing risks like front-running.
 
-### Planned Use of Superchain Interoperability Features
+## Planned Use of Superchain Interoperability Features
 
 Super DCA plans to leverage Superchain interoperability to enhance cross-chain functionality:
 
@@ -72,7 +72,7 @@ flowchart TB
     class UC_Hook,Base_Hook,Op_Hook hook
 ```
 
-### Expected User Benefits from Interoperability
+## Expected User Benefits from Interoperability
 
 - **Seamless Cross-Chain DCA:** Users can initiate DCA on one chain and settle on another. 
 - **Reduced Costs and Increased Efficiency:** Unified liquidity and standardized token operations minimize fees and reduce the need for multiple token representations.
