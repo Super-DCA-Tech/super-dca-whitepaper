@@ -14,7 +14,7 @@ Super DCA plans to leverage Superchain interoperability to enhance cross-chain f
 
 - **Cross-Chain Liquidity:** Super DCA can do seamless token transfers across chains, allowing users to DCA tokens on one chain and receive assets on another without additional middlemen fees or liquidity fragmentation by integrating ERC-7802.
 - **Unified Token Standard:** Implementing ERC-7802's `crosschainMint` and `crosschainBurn` functions facilitates standardized cross-chain operations and ensuring consistent token behavior across the Superchain ecosystem.
-- **Decentralized Execution Coordination:** Super DCA can coordinate execution agents like Gelato and staked executors across chains to maintain reliable order execution using Superchain's cross-chain messaging.
+- **Decentralized Execution Coordination:** Super DCA coordinates and maintains order execution directly within Uniswap v4 swap hook functions using Superchain messaging for seamless cross-chain fulfillment.
 
 ```mermaid
 flowchart TB
