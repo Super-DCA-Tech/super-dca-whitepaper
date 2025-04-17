@@ -13,7 +13,6 @@
     - Super DCA Token deployed to both OPChainA (ChainID 901) and OPChainB (ChainID 902) via **Create2** for identical addresses.
     - Deploy Uniswap v4 infrastructure
 - Intra-chain swap logic enabling SuperDCA token to be used as a base token in token swaps.
-    - Allow on 
     - Swap path ex. (x -> DCA -> y)
 
 **Technical Tasks:**
