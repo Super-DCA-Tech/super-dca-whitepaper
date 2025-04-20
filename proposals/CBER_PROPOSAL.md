@@ -207,7 +207,7 @@ Total Cost = Protocol Fee (0.5%) + AMM Fee (0-1%)
 ```
 Traditional TWAMMs rely on external solver networks and implement fixed protocol fees that don't adjust based on volume. They maintain separate fee structures for AMM and protocol operations, while also creating higher barriers to entry for executors due to their architecture.
 
-The AMM fee is 0% in cases where the TWAMM protocol abosorbs the fee as part of its own fee structure. AMM fees vary with Uniswap V3 having a 1% upper bound for the fees a pool can charge. The AMM fee may not be transparent to the user and its left up to the protocol to determine how to account for that. In most instances it appears that TWAMMs using Uniswap for liquidity charge their protocol fee on top of the fee that liquidity providers charge through the AMM.
+The AMM fee is 0% in cases where the TWAMM protocol absorbs the fee as part of its own fee structure. AMM fees vary with Uniswap V3 having a 1% upper bound for the fees a pool can charge. The AMM fee may not be transparent to the user and its left up to the protocol to determine how to account for that. In most instances it appears that TWAMMs using Uniswap for liquidity charge their protocol fee on top of the fee that liquidity providers charge through the AMM.
 
 #### Super DCA Model
 ```
