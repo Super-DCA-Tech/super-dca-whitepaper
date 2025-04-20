@@ -270,7 +270,7 @@ The network on Optimism is made up of three liquidity pools:
 - DCA-ETH
 - DCA-OP
 
-This existing pilot has already collected data about the performance of the Super DCA TWAMM compared to other AMMs on Optimism (see: [Super DCA Benchmarks](https://forum.tecommons.org/t/super-dca-benchmarks/1404)). However, it has also identified parts of the protocol that need to be improved. The results are still promising and having the system up and collecting data is very helpful. The figure below shows the results of the pilot benchmarking anaysis.
+This existing pilot has already collected data about the performance of the Super DCA TWAMM compared to other AMMs on Optimism (see: [Super DCA Benchmarks](https://forum.tecommons.org/t/super-dca-benchmarks/1404)). However, it has also identified parts of the protocol that need to be improved. The results are still promising and having the system up and collecting data is very helpful. The figure below shows the results of the pilot benchmarking analysis.
 
 ![DCA Pilot Benchmarking](./images/image.png)
 *Figure: Shows the results of the pilot benchmarking analysis.*
