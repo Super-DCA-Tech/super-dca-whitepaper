@@ -154,7 +154,7 @@ Our implementation begins with beta testing on Arbitrum One. Super DCA is code-c
 
 Next, we will migrate our application stack to React Native to support reliable iOS/Android builds without sacrificing performance. We will run user surveys throughout the beta and integrate findings into the product while building the native mobile experience.
 
-Finally, we will deliver the iOS/Android application experience with either Coinbase Embedded Wallets or Privvy for seamless mobile onboarding, real-time investment dashboards, and a streamlined rewards-claim interface. Native iOS/Android notifications will keep users engaged with claim windows, milestones, and pool performance. To drive adoption, we will launch the "Earn Cash-Back for Investing on Arbitrum" campaign and introduce gamified reward milestones (e.g., 1, 3, and 6-month streaks) that reinforce consistent, long-term investing behavior.
+Finally, we will deliver the iOS/Android application experience with the Tether Wallet SDK for seamless mobile onboarding via stablecoin-only deposits (USDC transfers from existing wallets/exchanges), real-time investment dashboards, and a streamlined rewards-claim interface. This approach eliminates fiat on-ramp fees and friction, aligning with our zero-fee approach. Native iOS/Android notifications will keep users engaged with claim windows, milestones, and pool performance. To drive adoption, we will launch the "Earn Cash-Back for Investing on Arbitrum" campaign and introduce gamified reward milestones (e.g., 1, 3, and 6-month streaks) that reinforce consistent, long-term investing behavior.
 Outline the major deliverables you will obtain with this grant
 
 Arbitrum Beta Deployment
@@ -183,6 +183,7 @@ iOS & Android App Store Release
 
 - Public production release of the Super DCA app to iOS and Android app stores
 - In-app rewards claim UI and real-time dashboards
+- Tether Wallet SDK integration for stablecoin-only (USDC) onboarding
 - Onboarding documentation and release notes
 - Post-launch user feedback summary
 Please explain how your idea/project aligns with the Arbitrum ecosystem goals (e.g., DeFi dominance, developer tools, ecosystem expansion) and why it will serve as a growth force for Arbitrum?
@@ -292,7 +293,7 @@ Deliverables: Comprehensive security audit of Super DCA v2 contracts through She
 
 M4: iOS and Android App Store Release
 Amount: $14,375; ETA: Week 24
-Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; Tether Wallet SDK integration for stablecoin-only (USDC) onboarding; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
 Are milestones clearly defined, time-bound, and measurable with quantitative metrics where applicable? What are your reference KPI, if applicable, for each milestone
 
 Below are a list of KPIs that we will track to measure the success of the project. Where possible, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs.
@@ -398,7 +399,7 @@ Deadline for this milestone
 iOS and Android App Store Release
 33 / 1024
 
-Goal: Publish the Super DCA iOS and Android App Store version and onboard 100+ active users using paid marketing campaigns. Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+Goal: Publish the Super DCA iOS and Android App Store version and onboard 100+ active users using paid marketing campaigns. Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; Tether Wallet SDK integration for stablecoin-only (USDC) onboarding; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
 395 / 2048
 
 Deadline for this milestone
