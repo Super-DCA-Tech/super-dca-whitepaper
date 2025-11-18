@@ -128,7 +128,9 @@ Do you know about any comparable protocol, event, game, tool or project within t
 - Mean Finance: Shut down in 2024.
 What is the current stage of your project?
 
-We have a live MVP and have conducted several pilots on Mainnet OP and Base (metrics from pilots can be found in the metrics question below). Our Uniswap v4 Hook was audited by Sherlock. During the pilot programs we validated low-slippage, price impacts/improvements, execution frequency, and revenue assumptions. We also have Super DCA listed on DefiLlama and created a dashboard on Dune Analytics (links in the metrics section below). You can view our public dashboards on Dune Analytics (https://dune.com/mikeghen1/super-dca-v1) and DefiLlama (https://defillama.com/protocol/super-dca). Note that our low TVL on DefiLlama is due to our Uniswap v4 Hook being under audit by Sherlock. We requested that LPs withdraw their liquidity until the audit is complete.
+We have a live MVP and have conducted several pilots on Mainnet OP and Base (metrics from pilots can be found in the metrics question below). Our Uniswap v4 Hook and Super DCA Cashback rewards contract completed a Sherlock public audit contest and are deployed to OP Mainnet with OP rewards distributed via Merkl.
+
+During the pilot programs we validated low-slippage, price impacts/improvements, execution frequency, and revenue assumptions. We also have Super DCA listed on DefiLlama and created a dashboard on Dune Analytics (links in the metrics section below). You can view our public dashboards on Dune Analytics (https://dune.com/mikeghen1/super-dca-v1) and DefiLlama (https://defillama.com/protocol/super-dca).
 
 Have you received a grant from the DAO, Foundation, or any Arbitrum ecosystem related program or conducted any IRL like a hackathon or workshop?
 
@@ -150,7 +152,7 @@ What is the idea/project for which you are applying for a grant
 
 Super DCA is applying for funding to deploy the protocol to Arbitrum and run a controlled beta, then deliver an Arbitrum-powered mobile application to reach new markets. These efforts advance our zero-fee, cash-back DCA mechanism and extend it to a broader iOS and Android audience.]
 
-Our implementation begins with beta testing on Arbitrum One. Super DCA is code-complete and has already run pilots on Base and Optimism, validating core assumptions. A portion of the codebase has undergone review via Sherlock. We will stand up the Arbitrum beta with safeguards and provide targeted incentives for testers in addition to Super DCA's native rewards, collecting usage data and qualitative feedback to guide final product polish.
+Our implementation begins with beta testing on Arbitrum One. Super DCA is code-complete and has already run pilots on Base and Optimism, validating core assumptions. The Uniswap v4 Hook and Super DCA Cashback rewards contract have completed Sherlock audit. We will stand up the Arbitrum beta with safeguards (1000 USDC/month per market caps, USDC/ETH/WBTC/ARB only) and provide targeted incentives for beta testers in addition to Super DCA's native rewards, collecting usage data and qualitative feedback to guide final product polish.
 
 Next, we will migrate our application stack to React Native to support reliable iOS/Android builds without sacrificing performance. We will run user surveys throughout the beta and integrate findings into the product while building the native mobile experience.
 
@@ -211,7 +213,7 @@ Top Level Category Breakdown:
 
 Milestone 1 — Arbitrum Mainnet Beta Deployment ($9,175)
 
-Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives.
+Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives for beta testers.
 Cost breakdown:
 
 * Personnel
@@ -224,7 +226,7 @@ Cost breakdown:
   * DigitalOcean — $50 (2 months, Keeper VM)
   * Sentry — $50 (2 months, error tracking)
 * Marketing / Outreach
-  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for LP incentives, both distributed via Merkl; Super DCA Cashback rewards audited by Sherlock provide additional native in-app rewards)
+  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for LP incentives, both distributed via Merkl to beta testers; Super DCA Cashback rewards contract audited by Sherlock provides additional native in-app rewards)
 * Total: $9,175
 
 Milestone 2 — React Native Migration & iOS TestFlight ($12,375)
@@ -281,7 +283,7 @@ Provide a list of the milestones, with the USD amount of the grant associated to
 
 M1: Arbitrum Beta Deployment
 Amount: $9,175; ETA: Week 4
-Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React web application live with rewards enabled; trader and LP incentives distributed via Merkl; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Deliverables: Deployed Super DCA contracts on Arbitrum One with caps (1000 USDC/month per market, USDC/ETH/WBTC/ARB only) and monitoring; React web application live with Sherlock-audited Super DCA Cashback rewards enabled; trader and LP incentives distributed via Merkl to beta testers; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 
 M2: React Native Migration & iOS TestFlight
 Amount: $12,375; ETA: Week 12
@@ -360,7 +362,7 @@ Type of Milestone
 Arbitrum Mainnet Beta Deployment 
 33 / 1024
 
-Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React web application live with rewards enabled; trader and LP incentives distributed via Merkl; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives for beta testers. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React web application live with Sherlock-audited Super DCA Cashback rewards enabled; trader and LP incentives distributed via Merkl to beta testers; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 342 / 2048
 
 Deadline for this milestone
@@ -442,7 +444,7 @@ Pilot 3: July 2025 - September 2025, PFOF/Liquidity Network on Uniswap V4
 - Note: This pilot was ended when the Super DCA contracts went into audit, for security reasons we had everyone stop using it and remove their liquidity.
 Audit History & Security Vendors
 
-Sherlock Public Audit Contest: Currently in progress (in fix review phase) and will include a Bug Bounty program managed by Sherlock upon completion. The scope of this audit is our Uniswap V4 hook contracts. 
+Sherlock Public Audit Contest: Completed with Bug Bounty program managed by Sherlock. The scope of this audit was our Uniswap V4 hook contracts and Super DCA Cashback rewards contract. 
 Is your project composable with other projects on Arbitrum? If so, please explain how
 
 Yes, we are integrated with other protocols including Superfluid, Uniswap v4, and Gelato. Super DCA's liquidity network lends itself nicely to yield aggregator and Uniswap v4 active LP management protocols. Super DCA's Pool contracts can be integrated into other smart contracts if there are integrators that need DCA services in their application. We have seen previously that yield compounding protocols can use Super DCA to periodically sell their rewards using a DCA approach. Finally, DAOs doing buy back programs can use Super DCA as an additional protocol to perform buybacks with 0%-fees.
