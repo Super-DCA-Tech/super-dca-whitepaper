@@ -296,21 +296,22 @@ Deliverables: Comprehensive security audit of Super DCA v2 contracts through She
 M4: iOS and Android App Store Release
 Amount: $14,375; ETA: Week 24
 Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; Tether Wallet SDK integration for stablecoin-only (USDC) onboarding; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+
 Are milestones clearly defined, time-bound, and measurable with quantitative metrics where applicable? What are your reference KPI, if applicable, for each milestone
 
-Below are a list of KPIs that we will track to measure the success of the project. Where possible, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs.
+Our project uses goal-based and time-bound milestones in Questbook. We are including these KPIs that the community can track to measure the success of the project at each stage. Where possible, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs. Annualized volume metrics use "run-rate" methodology: weekly volume × 52.
 
 M1: Arbitrum Beta Deployment
 - 50+ funded streams from at least 25 distinct accounts.
 - Liquidity network TVL > $10,000.
-- At least $100K/per year in Uniswap V4 Hook volume.
+- At least $100K/year in Uniswap V4 Hook volume (annualized run-rate).
 - At least 15 unique beta test survey respondents.
 
 M2: React Native Migration & iOS TestFlight
 - React Native app successfully built and deployed to TestFlight.
 - +25 beta test users with at least 1 stream funded.
 - +50 funded trades through mobile application.
-- +$10K/month in volume from beta test users.
+- +$120K/year in volume from beta test users (annualized run-rate).
 - +15 unique beta test survey respondents.
 
 M3: Smart Contract Audit
@@ -322,11 +323,13 @@ M3: Smart Contract Audit
 M4: iOS and Android App Store Release
 - +100 downloads with at least 1 stream funded.
 - +200 funded trades through the mobile application.
-- +$1M/year in volume for mobile application users.
+- +$1M/year in volume for mobile application users (annualized run-rate).
 - +4.5 star reviews in the iOS and Android App stores.
+
 What is the estimated maximum time for the completion of the project?
 
 We estimate it will take 6 months to complete all the milestones and reach our KPIs.
+
 How should the Arbitrum community measure the success of this grant?
 
 Here is a generalized list of KPIs derived from our answer to the previous question. For quantitative KPI information, please see the previous answer. Where applicable, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs.
@@ -334,10 +337,10 @@ Here is a generalized list of KPIs derived from our answer to the previous quest
 - Number of Funded Long-term Trades: Total funded streams and growth over time.
 - Distinct Funding Accounts: Total number of unique accounts funding streams.
 - Liquidity Network TVL: Total value locked (TVL) in the liquidity network.
-- Annualized Volume via Uniswap V4 Hook: Total annualized transaction volume flowing through Uniswap V4 Hook integrations.
+- Annualized Volume via Uniswap V4 Hook: Total annualized transaction volume flowing through Uniswap V4 Hook integrations (weekly volume × 52).
 - User Feedback Participation: Number of unique survey respondents providing product feedback.
 - Mobile User Adoption: Number of mobile users with at least one funded stream.
-- Mobile Transaction Volume: Total monthly volume generated through mobile users.
+- Mobile Transaction Volume: Total annualized volume generated through mobile users (weekly volume × 52).
 - Mobile Application Ratings: Average user rating in iOS and Android app stores.
 What is the economic plan for maintaining operations or continuing the growth of your project after the grant period?
 
@@ -437,14 +440,15 @@ Pilot 3: July 2025 - September 2025, PFOF/Liquidity Network on Uniswap V4
 - Average Price Impact: +0.025% (Averaged IMPROVEMENT relative to Chainlink)
 - Average Time between Swaps: 2 hours
 - Average Swap Size: $0.65
-- Volume: $45,000 through Super DCA Uniswap v4 hook
+- Volume: $45,000 actual volume through Super DCA Uniswap v4 hook; peak annualized run-rate ~$120K/year (weekly volume × 52)
 - TVL: peak $2200
 - Source: https://dune.com/mikeghen1/super-dca-v1
 - Source: https://defillama.com/protocol/super-dca?tvl=true
 - Note: This pilot was ended when the Super DCA contracts went into audit, for security reasons we had everyone stop using it and remove their liquidity.
 Audit History & Security Vendors
 
-Sherlock Public Audit Contest: Completed with Bug Bounty program managed by Sherlock. The scope of this audit was our Uniswap V4 hook contracts and Super DCA Cashback rewards contract. 
+Sherlock Public Audit Contest: Completed. The scope of this audit was our Uniswap V4 hook contracts and Super DCA Cashback rewards contract. Bug Bounty program managed by Sherlock is being established.
+
 Is your project composable with other projects on Arbitrum? If so, please explain how
 
 Yes, we are integrated with other protocols including Superfluid, Uniswap v4, and Gelato. Super DCA's liquidity network lends itself nicely to yield aggregator and Uniswap v4 active LP management protocols. Super DCA's Pool contracts can be integrated into other smart contracts if there are integrators that need DCA services in their application. We have seen previously that yield compounding protocols can use Super DCA to periodically sell their rewards using a DCA approach. Finally, DAOs doing buy back programs can use Super DCA as an additional protocol to perform buybacks with 0%-fees.
