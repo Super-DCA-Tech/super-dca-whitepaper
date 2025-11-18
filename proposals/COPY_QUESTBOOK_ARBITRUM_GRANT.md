@@ -224,12 +224,12 @@ Cost breakdown:
   * DigitalOcean — $50 (2 months, Keeper VM)
   * Sentry — $50 (2 months, error tracking)
 * Marketing / Outreach
-  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for Merkl LP incentives, both distributed along side Super DCA native rewards)
+  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for LP incentives, both distributed via Merkl; Super DCA Cashback rewards audited by Sherlock provide additional native in-app rewards)
 * Total: $9,175
 
 Milestone 2 — React Native Migration & iOS TestFlight ($12,375)
 
-Goal: Migrate application to React Native and deliver a TestFlight build with user incentives and community support.
+Goal: Migrate application to React Native and deliver a TestFlight build with in-app incentives powered by Merkl.
 Cost breakdown:
 
 * Personnel
@@ -242,8 +242,8 @@ Cost breakdown:
   * DigitalOcean — $100
   * Sentry — $100
 * Marketing
-  * TestFlight user rewards — $2,500
-  * LP Incentives — $1,250
+  * TestFlight user rewards — $2,500 (in-app rewards powered by Merkl)
+  * LP Incentives — $1,250 (distributed via Merkl)
 * Total: $12,375
 
 Milestone 3 — Smart Contract Audit ($12,500)
@@ -271,8 +271,8 @@ Cost breakdown:
   * DigitalOcean — $200
   * Sentry — $200
 * Marketing
-  * Mobile App Rewards — $3,000 (distributed through bi-weekly trader rewards along side Super DCA native rewards)
-  * LP Incentives — $1,500 (distributed through Merkl along side Super DCA native LP rewards)
+  * Mobile App Rewards — $3,000 (in-app bi-weekly trader rewards powered by Merkl alongside Super DCA native Cashback rewards)
+  * LP Incentives — $1,500 (distributed via Merkl alongside Super DCA native LP rewards)
   * Launch Campaign — $2,400 (paid marketing campaigns: social media, search, app store; used over a 12 month period of time, $200/month budget)
 * Total: $14,375
 
@@ -281,11 +281,11 @@ Provide a list of the milestones, with the USD amount of the grant associated to
 
 M1: Arbitrum Beta Deployment
 Amount: $9,175; ETA: Week 4
-Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; trader and LP incentives distributed via Merkl; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 
 M2: React Native Migration & iOS TestFlight
 Amount: $12,375; ETA: Week 12
-Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
+Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; in-app trader incentives powered by Merkl; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
 
 M3: Smart Contract Audit
 Amount: $12,500; ETA: Week 16
@@ -360,7 +360,7 @@ Type of Milestone
 Arbitrum Mainnet Beta Deployment 
 33 / 1024
 
-Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives distributed via Merkl for controlled beta safety. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; trader and LP incentives distributed via Merkl for controlled beta; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 342 / 2048
 
 Deadline for this milestone
@@ -373,7 +373,7 @@ Deadline for this milestone
 React Native Migration & iOS TestFlight
 39 / 1024
 
-Goal: Migrate application to React Native and deliver a TestFlight build with user incentives and community support. Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
+Goal: Migrate application to React Native and deliver a TestFlight build with in-app user incentives (powered by Merkl) to validate mobile rewards UX. Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; in-app trader incentives; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
 369 / 2048
 
 Deadline for this milestone
