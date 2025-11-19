@@ -90,7 +90,7 @@ Super DCA introduces a new, incentive-aligned mechanism for long-term investing 
 
 Super DCA tackles the behavioral challenge at the heart of traditional DCA adoption. Many users understand the benefits of dollar-cost averaging but delay starting or lose consistency over time. Super DCA solves this by introducing bi-weekly cash-back rewards that make disciplined investing engaging and rewarding, turning long-term participation into a habit rather than a chore.
 
-The protocol is incentivized to curate high-quality, long-term assets instead of chasing short-term hype because low-quality or purely speculative tokens would reduce overall network performance. Therefore, Super DCA focuses on listing onchain stocks and other high-quality assets with long-term growth potential. Arbiturm has already been selected by the largest RWA companies like Gemini and Robinhood as the home for stocks onchain. Super DCA will bring high-quality, long-term liquidity to these emerging markets.
+The protocol is incentivized to curate high-quality, long-term assets instead of chasing short-term hype because low-quality or purely speculative tokens would reduce overall network performance. Therefore, Super DCA focuses on listing pre-existing, compliant onchain equities and RWAs with Chainlink price feeds (e.g., Tether Gold) that are already deployed and are tradeable through Uniswap v4 pools on Arbitrum. Arbiturm has already been selected by the largest RWA companies like Gemini and Robinhood as the home for stocks onchain. Super DCA will bring high-quality, long-term liquidity to these emerging markets through Uniswap v4 pools.
 
 Additionally, this grant funds a Super DCA mobile application for distribution through Apple and Android app stores. There are currently no mobile applications that offer DCA using onchain mechanisms—even the Uniswap application does not offer this feature. Powering the application by Arbitrum will be a genuinely new product that reaches a larger market of iOS and Android users.
 Do you have a target audience? If so, which one?
@@ -128,7 +128,9 @@ Do you know about any comparable protocol, event, game, tool or project within t
 - Mean Finance: Shut down in 2024.
 What is the current stage of your project?
 
-We have a live MVP and have conducted several pilots on Mainnet OP and Base (metrics from pilots can be found in the metrics question below). Our Uniswap v4 Hook was audited by Sherlock. During the pilot programs we validated low-slippage, price impacts/improvements, execution frequency, and revenue assumptions. We also have Super DCA listed on DefiLlama and created a dashboard on Dune Analytics (links in the metrics section below). You can view our public dashboards on Dune Analytics (https://dune.com/mikeghen1/super-dca-v1) and DefiLlama (https://defillama.com/protocol/super-dca). Note that our low TVL on DefiLlama is due to our Uniswap v4 Hook being under audit by Sherlock. We requested that LPs withdraw their liquidity until the audit is complete.
+We have a live MVP and have conducted several pilots on Mainnet OP and Base (metrics from pilots can be found in the metrics question below). Our Uniswap v4 Hook and Super DCA Cashback rewards contract completed a Sherlock public audit contest and are deployed to OP Mainnet with OP rewards distributed via Merkl.
+
+During the pilot programs we validated low-slippage, price impacts/improvements, execution frequency, and revenue assumptions. We also have Super DCA listed on DefiLlama and created a dashboard on Dune Analytics (links in the metrics section below). You can view our public dashboards on Dune Analytics (https://dune.com/mikeghen1/super-dca-v1) and DefiLlama (https://defillama.com/protocol/super-dca).
 
 Have you received a grant from the DAO, Foundation, or any Arbitrum ecosystem related program or conducted any IRL like a hackathon or workshop?
 
@@ -150,25 +152,26 @@ What is the idea/project for which you are applying for a grant
 
 Super DCA is applying for funding to deploy the protocol to Arbitrum and run a controlled beta, then deliver an Arbitrum-powered mobile application to reach new markets. These efforts advance our zero-fee, cash-back DCA mechanism and extend it to a broader iOS and Android audience.]
 
-Our implementation begins with beta testing on Arbitrum One. Super DCA is code-complete and has already run pilots on Base and Optimism, validating core assumptions. A portion of the codebase has undergone review via Sherlock. We will stand up the Arbitrum beta with safeguards and provide targeted incentives for testers in addition to Super DCA's native rewards, collecting usage data and qualitative feedback to guide final product polish.
+Our implementation begins with beta testing on Arbitrum One. Super DCA is code-complete and has already run pilots on Base and Optimism, validating core assumptions. The Uniswap v4 Hook and Super DCA Cashback rewards contract have completed Sherlock audit. We will stand up the Arbitrum beta with safeguards (1000 USDC/month per market caps, USDC/ETH/WBTC/ARB only) and provide targeted incentives for beta testers in addition to Super DCA's native rewards, collecting usage data and qualitative feedback to guide final product polish.
 
-Next, we will migrate our application stack to React Native to support reliable iOS/Android builds without sacrificing performance. We will run user surveys throughout the beta and integrate findings into the product while building the native mobile experience.
+Next, we will migrate our application stack to React Native, initially as a web app (PWA) to achieve feature parity with the current application while deferring native integrations. Then we will produce native iOS/Android builds with Tether Wallet SDK, secure key management, and push notifications. We will run user surveys throughout the beta and integrate findings into the native mobile experience.
 
-Finally, we will deliver the iOS/Android application experience with either Coinbase Embedded Wallets or Privvy for seamless mobile onboarding, real-time investment dashboards, and a streamlined rewards-claim interface. Native iOS/Android notifications will keep users engaged with claim windows, milestones, and pool performance. To drive adoption, we will launch the "Earn Cash-Back for Investing on Arbitrum" campaign and introduce gamified reward milestones (e.g., 1, 3, and 6-month streaks) that reinforce consistent, long-term investing behavior.
+Finally, we will deliver the iOS/Android application experience with the Tether Wallet SDK for seamless mobile onboarding via stablecoin-only deposits (USDC transfers from existing wallets/exchanges), real-time investment dashboards, and a streamlined rewards-claim interface. This approach eliminates fiat on-ramp fees and friction, aligning with our zero-fee approach. Native iOS/Android notifications will keep users engaged with claim windows, milestones, and pool performance. To drive adoption, we will launch the "Earn Cash-Back for Investing on Arbitrum" campaign and introduce gamified reward milestones (e.g., 1, 3, and 6-month streaks) that reinforce consistent, long-term investing behavior.
 Outline the major deliverables you will obtain with this grant
 
 Arbitrum Beta Deployment
 
-- Contracts and React Native frontend deployed with Super DCA rewards enabled
+- Contracts and React Native web app (PWA) deployed to app.superdca.org with Super DCA rewards enabled
+- Feature parity with current DCA application validated through QA
 - Dashboards set up on DefiLlama and Dune for data collection
 - Beta-test user feedback survey results
 - Super DCA documentation using Gitbook
 
 React Native Application & iOS TestFlight
 
-- React Native migration complete with iOS TestFlight available for beta testing
+- Native iOS/Android builds from M1 React Native app with Tether Wallet SDK integration, secure key management (pin/biometric), push notifications, and backend API integrations
 - iOS application available for beta testing via Apple TestFlight
-- Native notifications for rewards/milestones
+- Full wallet onboarding and mobile-specific UX
 - TestFlight user feedback survey results
 - Dedicated Dune dashboards tracking mobile activity
 
@@ -183,15 +186,16 @@ iOS & Android App Store Release
 
 - Public production release of the Super DCA app to iOS and Android app stores
 - In-app rewards claim UI and real-time dashboards
+- Tether Wallet SDK integration for stablecoin-only (USDC) onboarding
 - Onboarding documentation and release notes
 - Post-launch user feedback summary
 Please explain how your idea/project aligns with the Arbitrum ecosystem goals (e.g., DeFi dominance, developer tools, ecosystem expansion) and why it will serve as a growth force for Arbitrum?
 
 Super DCA advances Arbitrum's DeFi dominance by establishing a sticky long-term investing primitive—recurring inflows—with an on-chain PFOF revenue model that eliminates user-facing swap fees while sustaining protocol income. This is a genuinely new mechanism for DCA on Arbitrum: cash-back, zero-fee execution paired with Uniswap v4 hooks and a curated liquidity network.
 
-Super DCA drives ecosystem expansion beyond crypto-native traders through a mobile-first UX and bi-weekly cash-back incentives that convert mainstream "cash-back" savers into on-chain participants. Our listings emphasize high-quality, long-term assets (including tokenized equities), aligning protocol health with user outcomes and reinforcing Arbitrum's reputation for serious, durable financial applications. The native mobile app broadens distribution via iOS/Android, opening a materially larger funnel than web-only DEX experiences. Arbitrum has been selected by major onchain stock companies like Gemini and Robinhood as the home for stocks onchain. Super DCA will bring high-quality, long-term liquidity to these emerging markets.
+Super DCA drives ecosystem expansion beyond crypto-native traders through a mobile-first UX and bi-weekly cash-back incentives that convert mainstream "cash-back" savers into on-chain participants. Our listings emphasize high-quality, long-term assets (including compliant RWAs/equities with Chainlink oracles and Uniswap v4 pools available on Arbitrum), aligning protocol health with user outcomes and reinforcing Arbitrum's reputation for serious, durable financial applications. Listings require a Uniswap v4 pool pairing the asset with the DCA token (e.g., XAUT-DCA) plus minimum full-range liquidity at launch. The native mobile app broadens distribution via iOS/Android, opening a materially larger funnel than web-only DEX experiences. Arbitrum has been selected by major onchain stock companies like Gemini and Robinhood as the home for stocks onchain. Super DCA will bring high-quality, long-term liquidity to these emerging markets.
 
-The TVL, volume, and fee impact are direct and measurable. The Super DCA Liquidity Network pairs every $1 of added liquidity with $1 of DCA, creating $2 in TVL per $1 provided, while the routing design and v4 hooks generate ~$5 in volume per $1 of DCA volume. In pilots on OP and Base, approximately $1,000/month through Super DCA produced ~$5,000/month of additional volume via the Uniswap v4 hook, validating the multiplicative effect. These flows increase on-chain transactions and gas consumption—benefiting Arbitrum validators and ecosystem dashboards.
+The TVL, volume, and fee impact are direct and measurable. The Super DCA Liquidity Network requires liquidity to be paired with DCA in a Uniswap v4 pool (e.g., USDC-DCA). In pilots, pools balance near 50/50, so $1 of USDC paired with $1 of DCA creates $2 in TVL per $1 provided—DCA moves from wallets into productive liquidity. External order flow that consumes this liquidity is generated organically by arbitrage and aggregator routing, confirmed in our pilots where ~$1,000/month through Super DCA produced ~$5,000/month of additional volume via the Uniswap v4 hook, validating the multiplicative effect. These flows increase on-chain transactions and gas consumption—benefiting Arbitrum validators and ecosystem dashboards.
 
 Futhermore, Super DCA has native rewards for both traders (bi-weekly cash-back rewards) and liquidity providers (DCA token donations through our v4 hook), which will help to incentivize the adoption of the protocol. Therefore, Super DCA will help to grow the Arbitrum ecosystem using its own native rewards system on top of our requested trader and LP incentives (see Budget breakdown below for details).
 What is your requested grant
@@ -210,12 +214,12 @@ Top Level Category Breakdown:
 
 Milestone 1 — Arbitrum Mainnet Beta Deployment ($9,175)
 
-Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives.
+Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives for beta testers.
 Cost breakdown:
 
 * Personnel
   * Solidity Engineer @ $65 × 40h — $2,600 (integration, testing, deployment)
-  * React Engineer @ $55 × 40h — $2,200 (React Native frontend for Beta)
+  * React Engineer @ $55 × 40h — $2,200 (React Native web app migration, feature parity QA, PWA deployment to app.superdca.org)
   * Community Manager @ $45 × 25h — $1,125 (Discord/TG ops & announcements)
 * Infrastructure / Licenses
   * Tenderly — $100 (2 months, RPC/monitoring/alerting)
@@ -223,17 +227,17 @@ Cost breakdown:
   * DigitalOcean — $50 (2 months, Keeper VM)
   * Sentry — $50 (2 months, error tracking)
 * Marketing / Outreach
-  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for Merkl LP incentives, both distributed along side Super DCA native rewards)
+  * LP & Trader Incentives — $3,000 ($1500 for bi-weekly trader rewards, $1500 for LP incentives, both distributed via Merkl to beta testers; Super DCA Cashback rewards contract audited by Sherlock provides additional native in-app rewards)
 * Total: $9,175
 
 Milestone 2 — React Native Migration & iOS TestFlight ($12,375)
 
-Goal: Migrate application to React Native and deliver a TestFlight build with user incentives and community support.
+Goal: Produce native iOS/Android builds from M1 React Native app and deliver iOS TestFlight build with wallet onboarding and in-app incentives powered by Merkl.
 Cost breakdown:
 
 * Personnel
   * Solidity Engineer @ $65 × 40h — $2,600 (incentive logic integration)
-  * React Engineer @ $55 × 80h — $4,400 (RN migration, development & QA)
+  * React Engineer @ $55 × 80h — $4,400 (native iOS/Android builds, Tether Wallet SDK, secure key management with pin/biometric, push notifications, backend APIs, TestFlight distribution & QA)
   * Community Manager @ $45 × 25h — $1,125 (support & comms)
 * Infrastructure / Licenses (4 months)
   * Tenderly — $200
@@ -241,8 +245,8 @@ Cost breakdown:
   * DigitalOcean — $100
   * Sentry — $100
 * Marketing
-  * TestFlight user rewards — $2,500
-  * LP Incentives — $1,250
+  * TestFlight user rewards — $2,500 (in-app rewards powered by Merkl)
+  * LP Incentives — $1,250 (distributed via Merkl)
 * Total: $12,375
 
 Milestone 3 — Smart Contract Audit ($12,500)
@@ -270,8 +274,8 @@ Cost breakdown:
   * DigitalOcean — $200
   * Sentry — $200
 * Marketing
-  * Mobile App Rewards — $3,000 (distributed through bi-weekly trader rewards along side Super DCA native rewards)
-  * LP Incentives — $1,500 (distributed through Merkl along side Super DCA native LP rewards)
+  * Mobile App Rewards — $3,000 (in-app bi-weekly trader rewards powered by Merkl alongside Super DCA native Cashback rewards)
+  * LP Incentives — $1,500 (distributed via Merkl alongside Super DCA native LP rewards)
   * Launch Campaign — $2,400 (paid marketing campaigns: social media, search, app store; used over a 12 month period of time, $200/month budget)
 * Total: $14,375
 
@@ -280,11 +284,11 @@ Provide a list of the milestones, with the USD amount of the grant associated to
 
 M1: Arbitrum Beta Deployment
 Amount: $9,175; ETA: Week 4
-Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Deliverables: Deployed Super DCA contracts on Arbitrum One with caps (1000 USDC/month per market, USDC/ETH/WBTC/ARB only) and monitoring; React Native web app (PWA) deployed to app.superdca.org with feature parity validated and Sherlock-audited Cashback rewards enabled; trader and LP incentives distributed via Merkl to beta testers; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 
 M2: React Native Migration & iOS TestFlight
 Amount: $12,375; ETA: Week 12
-Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
+Deliverables: Native iOS/Android builds from M1 React Native app with Tether Wallet SDK integration, secure key management (pin/biometric), push notifications, and backend APIs; iOS TestFlight app available for controlled beta test with full wallet onboarding and mobile-specific UX; in-app trader incentives powered by Merkl; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
 
 M3: Smart Contract Audit
 Amount: $12,500; ETA: Week 16
@@ -292,23 +296,24 @@ Deliverables: Comprehensive security audit of Super DCA v2 contracts through She
 
 M4: iOS and Android App Store Release
 Amount: $14,375; ETA: Week 24
-Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; Tether Wallet SDK integration for stablecoin-only (USDC) onboarding; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+
 Are milestones clearly defined, time-bound, and measurable with quantitative metrics where applicable? What are your reference KPI, if applicable, for each milestone
 
-Below are a list of KPIs that we will track to measure the success of the project. Where possible, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs.
+Our project uses goal-based and time-bound milestones in Questbook. We are including these KPIs that the community can track to measure the success of the project at each stage. Where possible, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs. Annualized volume metrics use "run-rate" methodology: weekly volume × 52.
 
 M1: Arbitrum Beta Deployment
 - 50+ funded streams from at least 25 distinct accounts.
 - Liquidity network TVL > $10,000.
-- At least $100K/per year in Uniswap V4 Hook volume.
+- At least $100K/year in Uniswap V4 Hook volume (annualized run-rate).
 - At least 15 unique beta test survey respondents.
 
 M2: React Native Migration & iOS TestFlight
-- React Native app successfully built and deployed to TestFlight.
-- +25 beta test users with at least 1 stream funded.
-- +50 funded trades through mobile application.
-- +$10K/month in volume from beta test users.
-- +15 unique beta test survey respondents.
+- Native iOS/Android builds successfully created and iOS app deployed to TestFlight.
+- +25 TestFlight beta test users with at least 1 stream funded.
+- +50 funded trades through TestFlight mobile application.
+- +$120K/year in volume from beta test users (annualized run-rate).
+- +15 unique TestFlight beta test survey respondents.
 
 M3: Smart Contract Audit
 - Comprehensive audit completed through Sherlock Audit Contest.
@@ -319,11 +324,13 @@ M3: Smart Contract Audit
 M4: iOS and Android App Store Release
 - +100 downloads with at least 1 stream funded.
 - +200 funded trades through the mobile application.
-- +$1M/year in volume for mobile application users.
+- +$1M/year in volume for mobile application users (annualized run-rate).
 - +4.5 star reviews in the iOS and Android App stores.
+
 What is the estimated maximum time for the completion of the project?
 
 We estimate it will take 6 months to complete all the milestones and reach our KPIs.
+
 How should the Arbitrum community measure the success of this grant?
 
 Here is a generalized list of KPIs derived from our answer to the previous question. For quantitative KPI information, please see the previous answer. Where applicable, we will track KPIs using DefiLlama and Dune so the community can hold us accountable to our grants KPIs.
@@ -331,10 +338,10 @@ Here is a generalized list of KPIs derived from our answer to the previous quest
 - Number of Funded Long-term Trades: Total funded streams and growth over time.
 - Distinct Funding Accounts: Total number of unique accounts funding streams.
 - Liquidity Network TVL: Total value locked (TVL) in the liquidity network.
-- Annualized Volume via Uniswap V4 Hook: Total annualized transaction volume flowing through Uniswap V4 Hook integrations.
+- Annualized Volume via Uniswap V4 Hook: Total annualized transaction volume flowing through Uniswap V4 Hook integrations (weekly volume × 52).
 - User Feedback Participation: Number of unique survey respondents providing product feedback.
 - Mobile User Adoption: Number of mobile users with at least one funded stream.
-- Mobile Transaction Volume: Total monthly volume generated through mobile users.
+- Mobile Transaction Volume: Total annualized volume generated through mobile users (weekly volume × 52).
 - Mobile Application Ratings: Average user rating in iOS and Android app stores.
 What is the economic plan for maintaining operations or continuing the growth of your project after the grant period?
 
@@ -359,7 +366,7 @@ Type of Milestone
 Arbitrum Mainnet Beta Deployment 
 33 / 1024
 
-Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native frontend (web build) live with rewards enabled; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
+Goal: Deploy Super DCA Beta to Arbitrum mainnet with caps, monitoring, and LP/trader incentives for beta testers. Deliverables: Deployed Super DCA contracts on Arbitrum One with caps and monitoring; React Native web app (PWA) deployed to app.superdca.org with feature parity validated and Sherlock-audited Cashback rewards enabled; trader and LP incentives distributed via Merkl to beta testers; DefiLlama adapter and Dune dashboard set up for data collection; beta user feedback survey results.
 342 / 2048
 
 Deadline for this milestone
@@ -372,7 +379,7 @@ Deadline for this milestone
 React Native Migration & iOS TestFlight
 39 / 1024
 
-Goal: Migrate application to React Native and deliver a TestFlight build with user incentives and community support. Deliverables: Complete React Native migration from existing web app; iOS TestFlight app available for closed beta; native notifications for rewards/milestones; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
+Goal: Produce native iOS/Android builds from M1 React Native app and deliver iOS TestFlight build with wallet onboarding and in-app user incentives (powered by Merkl) to validate mobile rewards UX. Deliverables: Native iOS/Android builds from M1 React Native app with Tether Wallet SDK integration, secure key management (pin/biometric), push notifications, and backend APIs; iOS TestFlight app available for controlled beta test with full wallet onboarding; in-app trader incentives; TestFlight user feedback survey results; dedicated Dune dashboards tracking mobile activity.
 369 / 2048
 
 Deadline for this milestone
@@ -398,7 +405,7 @@ Deadline for this milestone
 iOS and Android App Store Release
 33 / 1024
 
-Goal: Publish the Super DCA iOS and Android App Store version and onboard 100+ active users using paid marketing campaigns. Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
+Goal: Publish the Super DCA iOS and Android App Store version and onboard 100+ active users using paid marketing campaigns. Deliverables: Public production release on iOS and Android app stores; in-app rewards claim UI and real-time dashboards; Tether Wallet SDK integration for stablecoin-only (USDC) onboarding; onboarding documentation and release notes; post-launch user feedback summary; launch marketing campaign ("Earn Cash-Back for Investing on Arbitrum").
 395 / 2048
 
 Deadline for this milestone
@@ -434,14 +441,15 @@ Pilot 3: July 2025 - September 2025, PFOF/Liquidity Network on Uniswap V4
 - Average Price Impact: +0.025% (Averaged IMPROVEMENT relative to Chainlink)
 - Average Time between Swaps: 2 hours
 - Average Swap Size: $0.65
-- Volume: $45,000 through Super DCA Uniswap v4 hook
+- Volume: $45,000 actual volume through Super DCA Uniswap v4 hook; peak annualized run-rate ~$120K/year (weekly volume × 52)
 - TVL: peak $2200
 - Source: https://dune.com/mikeghen1/super-dca-v1
 - Source: https://defillama.com/protocol/super-dca?tvl=true
 - Note: This pilot was ended when the Super DCA contracts went into audit, for security reasons we had everyone stop using it and remove their liquidity.
 Audit History & Security Vendors
 
-Sherlock Public Audit Contest: Currently in progress (in fix review phase) and will include a Bug Bounty program managed by Sherlock upon completion. The scope of this audit is our Uniswap V4 hook contracts. 
+Sherlock Public Audit Contest: Completed. The scope of this audit was our Uniswap V4 hook contracts and Super DCA Cashback rewards contract. Bug Bounty program managed by Sherlock is being established.
+
 Is your project composable with other projects on Arbitrum? If so, please explain how
 
 Yes, we are integrated with other protocols including Superfluid, Uniswap v4, and Gelato. Super DCA's liquidity network lends itself nicely to yield aggregator and Uniswap v4 active LP management protocols. Super DCA's Pool contracts can be integrated into other smart contracts if there are integrators that need DCA services in their application. We have seen previously that yield compounding protocols can use Super DCA to periodically sell their rewards using a DCA approach. Finally, DAOs doing buy back programs can use Super DCA as an additional protocol to perform buybacks with 0%-fees.
